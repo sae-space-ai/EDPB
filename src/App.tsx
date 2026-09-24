@@ -17,27 +17,29 @@ import { EcosystemV4 } from './components/EcosystemV4';
 import { RealTest } from './components/RealTest';
 import EnhancedGigafactorySearcherComponent from './components/EnhancedGigafactorySearcher';
 import TestRunner from './components/TestRunner';
+import SystemStatus from './components/SystemStatus';
 
-type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training';
+type Tab = 'status' | 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
+  { id: 'status', label: 'Status', icon: '🔍' },
   { id: 'dashboard', label: 'Dashboard', icon: '🏠' },
+  { id: 'testrunner', label: 'Test 100', icon: '🧪' },
+  { id: 'realtest', label: 'Real Test', icon: '🔥' },
   { id: 'ecosystem', label: 'Ecosystem', icon: '🌐' },
+  { id: 'enhanced-search', label: 'Search', icon: '🔍' },
   { id: 'ai-act', label: 'AI Act', icon: '🗺️' },
-  { id: 'subagents', label: 'Sub-Agents', icon: '🤖' },
-  { id: 'providers', label: 'Providers', icon: '🔌' },
-  { id: 'generative', label: 'AI Models', icon: '🧠' },
+  { id: 'subagents', label: 'Agents', icon: '🤖' },
+  { id: 'generative', label: 'LLMs', icon: '🧠' },
   { id: 'cybersecurity', label: 'Security', icon: '🛡️' },
-  { id: 'vectordb', label: 'Vector DB', icon: '🗄️' },
-  { id: 'gigafactory', label: 'Gigafactory', icon: '🏭' },
-  { id: 'enhanced-search', label: 'Enhanced Search', icon: '🔍' },
+  { id: 'gigafactory', label: 'Factory', icon: '🏭' },
+  { id: 'providers', label: 'Providers', icon: '🔌' },
+  { id: 'vectordb', label: 'VectorDB', icon: '🗄️' },
   { id: 'expertise', label: 'Expertise', icon: '🎯' },
   { id: 'evidence', label: 'Evidence', icon: '🔬' },
-  { id: 'autotest', label: 'Auto-Test', icon: '🧪' },
-  { id: 'realtest', label: 'Real Test', icon: '🔥' },
-  { id: 'testrunner', label: 'Test Runner', icon: '🧪' },
+  { id: 'autotest', label: 'AutoTest', icon: '⚡' },
   { id: 'projects', label: 'Projects', icon: '🚀' },
-  { id: 'publications', label: 'Publications', icon: '📚' },
+  { id: 'publications', label: 'Papers', icon: '📚' },
   { id: 'training', label: 'Training', icon: '🎓' },
 ];
 
@@ -47,6 +49,7 @@ function App() {
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'status': return <SystemStatus />;
       case 'dashboard': return <Dashboard />;
       case 'ecosystem': return <EcosystemV4 />;
       case 'ai-act': return <AIActMapper />;
@@ -65,7 +68,7 @@ function App() {
       case 'projects': return <Projects />;
       case 'publications': return <Publications />;
       case 'training': return <Training />;
-      default: return <Dashboard />;
+      default: return <SystemStatus />;
     }
   };
 
