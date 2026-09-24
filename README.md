@@ -95,6 +95,21 @@ Integra los 4 iconos oficiales de la UE (AI Act Art. 50(4)):
 | POST | `/api` | 13 acciones vía JSON |
 | POST | `/api/test` | Test completo |
 
+## 🗺️ Artículos AI Act Desbloqueados (55-62)
+
+| # | Artículo | Título | Expertise |
+|---|----------|--------|-----------|
+| 55 | Art. 55 | GPAI penalties | Regulatory Analysis, AI Governance, AI Compliance |
+| 56 | Art. 56 | Innovation support | AI Governance, Fintech, Training exercises |
+| 57 | Art. 57 | SME support | AI Compliance, Fintech, Evidence-Based Compliance |
+| 58 | Art. 58 | Sandboxes for SMEs | AI Governance, AI Compliance, Risk Management |
+| 59 | Art. 59 | Testing in real world | AI Risk Management, Human Oversight, AI Auditing |
+| 60 | Art. 60 | Informed consent | Data Protection, Human Oversight, Trustworthy AI |
+| 61 | Art. 61 | Supervision | AI Supervision, Policy Monitoring, Regulatory Analysis |
+| 62 | Art. 62 | Market surveillance | Regulatory Analysis, Policy Monitoring, AI Auditing |
+
+**Ver [UNLOCK_55_62_REPORT.md](UNLOCK_55_62_REPORT.md) para detalles completos del desbloqueo.**
+
 ## 📄 Documentación
 
 - [RESUMEN_EJECUTIVO.md](RESUMEN_EJECUTIVO.md)

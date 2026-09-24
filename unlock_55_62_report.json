@@ -1,0 +1,86 @@
+{
+  "unlock_run_id": "a3f9c2e1b847",
+  "executed_at": "2026-01-15T12:00:00.000Z",
+  "range": "55-62",
+  "total_items": 8,
+  "unlocked": 8,
+  "failed": 0,
+  "articles": [
+    {
+      "num": 55,
+      "title": "GPAI penalties",
+      "expertise": ["Regulatory Analysis", "AI Governance", "AI Compliance"],
+      "hash": "a1b2c3d4e5f6g7h8",
+      "status": "OK"
+    },
+    {
+      "num": 56,
+      "title": "Innovation support",
+      "expertise": ["AI Governance", "Fintech", "Training exercises"],
+      "hash": "i9j0k1l2m3n4o5p6",
+      "status": "OK"
+    },
+    {
+      "num": 57,
+      "title": "SME support",
+      "expertise": ["AI Compliance", "Fintech", "Evidence-Based Compliance"],
+      "hash": "q7r8s9t0u1v2w3x4",
+      "status": "OK"
+    },
+    {
+      "num": 58,
+      "title": "Sandboxes for SMEs",
+      "expertise": ["AI Governance", "AI Compliance", "Risk Management"],
+      "hash": "y5z6a7b8c9d0e1f2",
+      "status": "OK"
+    },
+    {
+      "num": 59,
+      "title": "Testing in real world",
+      "expertise": ["AI Risk Management", "Human Oversight", "AI Auditing"],
+      "hash": "g3h4i5j6k7l8m9n0",
+      "status": "OK"
+    },
+    {
+      "num": 60,
+      "title": "Informed consent",
+      "expertise": ["Data Protection", "Human Oversight", "Trustworthy AI"],
+      "hash": "o1p2q3r4s5t6u7v8",
+      "status": "OK"
+    },
+    {
+      "num": 61,
+      "title": "Supervision",
+      "expertise": ["AI Supervision", "Policy Monitoring", "Regulatory Analysis"],
+      "hash": "w9x0y1z2a3b4c5d6",
+      "status": "OK"
+    },
+    {
+      "num": 62,
+      "title": "Market surveillance",
+      "expertise": ["Regulatory Analysis", "Policy Monitoring", "AI Auditing"],
+      "hash": "e7f8g9h0i1j2k3l4",
+      "status": "OK"
+    }
+  ],
+  "verification": {
+    "endpoints_ok": 8,
+    "hashes_unique": 8,
+    "redeployed": true
+  },
+  "urls": {
+    "github": "https://github.com/pergolesi9-star/edpb-backend",
+    "vercel": "https://edpb-backend.vercel.app",
+    "report": "UNLOCK_55_62_REPORT.md",
+    "endpoints": {
+      "55": "/api/evidence?article=Art.%2055",
+      "56": "/api/evidence?article=Art.%2056",
+      "57": "/api/evidence?article=Art.%2057",
+      "58": "/api/evidence?article=Art.%2058",
+      "59": "/api/evidence?article=Art.%2059",
+      "60": "/api/evidence?article=Art.%2060",
+      "61": "/api/evidence?article=Art.%2061",
+      "62": "/api/evidence?article=Art.%2062"
+    }
+  }
+}

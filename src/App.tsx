@@ -24,10 +24,11 @@ import MVPDeclaration from './components/MVPDeclaration';
 import FreeTokensComplete from './components/FreeTokensComplete';
 import MVPFastTrack from './components/MVPFastTrack';
 import DeployWizard from './components/DeployWizard';
+import HashCalculator from './components/HashCalculator';
 import { EUAIIcon } from './components/EUAIIcon';
 import { EUAIActBadge } from './components/EUAIIcons';
 
-type Tab = 'deploy' | 'mvp' | 'mvp-fasttrack' | 'tokens-complete' | 'status' | 'engine' | 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training' | 'freetokens';
+type Tab = 'deploy' | 'mvp' | 'mvp-fasttrack' | 'tokens-complete' | 'status' | 'engine' | 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training' | 'freetokens' | 'hash-calculator';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'deploy', label: 'Deploy', icon: '🚀' },
@@ -55,6 +56,7 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'projects', label: 'Projects', icon: '🚀' },
   { id: 'publications', label: 'Papers', icon: '📚' },
   { id: 'training', label: 'Training', icon: '🎓' },
+  { id: 'hash-calculator', label: 'Hash Calculator', icon: '🔐' },
 ];
 
 function App() {
@@ -88,6 +90,7 @@ function App() {
       case 'projects': return <Projects />;
       case 'publications': return <Publications />;
       case 'training': return <Training />;
+      case 'hash-calculator': return <HashCalculator />;
       default: return <SystemStatus />;
     }
   };
