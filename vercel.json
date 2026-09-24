@@ -32,8 +32,36 @@
       "memory": 1024
     }
   },
+  "regions": ["iad1", "fra1"],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        },
+        {
+          "key": "X-Ecosystem",
+          "value": "EDPB-FULLSTACK-OPERATIVO"
+        },
+        {
+          "key": "X-Version",
+          "value": "5.0.0"
+        }
+      ]
+    }
+  ],
   "env": {
-    "ECOSYSTEM_NAME": "EDPB-SUPER-ECOSYSTEM",
-    "ECOSYSTEM_VERSION": "4.0.0"
+    "ECOSYSTEM_NAME": "EDPB-FULLSTACK-OPERATIVO",
+    "ECOSYSTEM_VERSION": "5.0.0"
   }
 }
