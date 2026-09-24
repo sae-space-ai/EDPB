@@ -1,5 +1,7 @@
 import { PROFILE } from "../data/profile";
 import { AI_ACT_MAPPING } from "../data/aiActMapping";
+import { SUBAGENT_REGISTRY } from "../data/subagents";
+import { FREE_PROVIDERS } from "../data/providers";
 
 function hash(data: string): string {
   let h = 0;
@@ -97,16 +99,51 @@ export function generateTrainingModule(topic: string): { status: string; module:
   };
 }
 
+export function dispatchTask(agentName: string, description: string): { status: string; agent?: string; task?: string; system_instruction?: string; expertise?: string[]; tools?: string[]; provider_preferred?: string; timestamp?: string; message?: string; available?: string[] } {
+  if (!(agentName in SUBAGENT_REGISTRY)) {
+    return {
+      status: "error",
+      message: `Sub-agent '${agentName}' not found`,
+      available: Object.keys(SUBAGENT_REGISTRY)
+    };
+  }
+  const agent = SUBAGENT_REGISTRY[agentName];
+  return {
+    status: "dispatched",
+    agent: agentName,
+    task: description,
+    system_instruction: agent.system,
+    expertise: agent.expertise,
+    tools: agent.tools,
+    provider_preferred: agent.provider_preferred,
+    timestamp: new Date().toISOString()
+  };
+}
+
 export function getAgentStatus() {
   return {
-    agent: "EDPB-SPE-EXPERT-2025",
-    version: "1.0.0",
+    agent: "EDPB-ARCHITECT-2025",
+    version: "2.0.0",
+    role: "Arquitecto Algorítmico + Orquestador de Sub-Agentes",
     candidate: PROFILE.name,
     email: PROFILE.email,
+    subagents: Object.keys(SUBAGENT_REGISTRY).length,
+    subagent_names: Object.keys(SUBAGENT_REGISTRY),
+    providers: Object.keys(FREE_PROVIDERS),
+    total_free_apis: Object.keys(FREE_PROVIDERS).length,
+    ai_act_articles_mapped: Object.keys(AI_ACT_MAPPING).length,
     expertise_fields: PROFILE.expertise.technical.length + PROFILE.expertise.legal.length,
     keywords: PROFILE.keywords.length,
     projects: PROFILE.projects.length,
     publications: PROFILE.publications.length,
     status: "ready",
   };
+}
+
+export function listSubagents() {
+  return { status: "success", subagents: SUBAGENT_REGISTRY };
+}
+
+export function listProviders() {
+  return { status: "success", providers: FREE_PROVIDERS };
 }
