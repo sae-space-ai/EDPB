@@ -16,8 +16,9 @@ import { AutoTest } from './components/AutoTest';
 import { EcosystemV4 } from './components/EcosystemV4';
 import { RealTest } from './components/RealTest';
 import EnhancedGigafactorySearcherComponent from './components/EnhancedGigafactorySearcher';
+import TestRunner from './components/TestRunner';
 
-type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'ecosystem' | 'projects' | 'publications' | 'training';
+type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'dashboard', label: 'Dashboard', icon: '🏠' },
@@ -34,6 +35,7 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'evidence', label: 'Evidence', icon: '🔬' },
   { id: 'autotest', label: 'Auto-Test', icon: '🧪' },
   { id: 'realtest', label: 'Real Test', icon: '🔥' },
+  { id: 'testrunner', label: 'Test Runner', icon: '🧪' },
   { id: 'projects', label: 'Projects', icon: '🚀' },
   { id: 'publications', label: 'Publications', icon: '📚' },
   { id: 'training', label: 'Training', icon: '🎓' },
@@ -59,6 +61,7 @@ function App() {
       case 'evidence': return <EvidenceEngine />;
       case 'autotest': return <AutoTest />;
       case 'realtest': return <RealTest />;
+      case 'testrunner': return <TestRunner />;
       case 'projects': return <Projects />;
       case 'publications': return <Publications />;
       case 'training': return <Training />;
