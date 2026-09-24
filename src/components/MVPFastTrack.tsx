@@ -232,8 +232,8 @@ export const MVPFastTrack: React.FC = () => {
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-lg p-4 border border-red-200">
-            <h3 className="font-bold text-red-900 mb-2">🛡️ 8 Herramientas Ciberseguridad</h3>
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4 border border-blue-200">
+            <h3 className="font-bold text-blue-900 mb-2">🛡️ 8 Herramientas Ciberseguridad</h3>
             <ul className="text-xs text-gray-600 space-y-1">
               <li>• strix</li>
               <li>• nuclei</li>

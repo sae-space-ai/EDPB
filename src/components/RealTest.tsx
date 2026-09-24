@@ -213,11 +213,11 @@ export const RealTest: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-gradient-to-r from-red-900 via-orange-900 to-amber-900 rounded-2xl p-8 text-white shadow-xl relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+      <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 text-white shadow-xl relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
         <div className="relative">
           <h1 className="text-3xl font-bold mb-2">🔬 Prueba Real con Trazabilidad Completa</h1>
-          <p className="text-red-200 text-lg">Ejecución del Ecosistema v4.0 con Hashes SHA-256 Verificables</p>
+          <p className="text-purple-200 text-lg">Ejecución del Ecosistema v4.0 con Hashes SHA-256 Verificables</p>
           <div className="mt-4 flex items-center gap-4 flex-wrap">
             <span className="bg-white/10 px-4 py-2 rounded-full text-sm">8 Fases</span>
             <span className="bg-white/10 px-4 py-2 rounded-full text-sm">31 Componentes</span>

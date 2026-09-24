@@ -17,11 +17,11 @@ export const CybersecurityTools: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-gradient-to-r from-red-900 via-rose-900 to-pink-900 rounded-2xl p-8 text-white shadow-xl relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+      <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 rounded-2xl p-8 text-white shadow-xl relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
         <div className="relative">
           <h1 className="text-3xl font-bold mb-2">🛡️ Cybersecurity Arsenal</h1>
-          <p className="text-red-200 text-lg">8 Tools — MEGAAGENTE CIBERSEGURIDAD IMPLACABLE</p>
+          <p className="text-blue-200 text-lg">8 Tools — MEGAAGENTE CIBERSEGURIDAD IMPLACABLE</p>
           <div className="mt-4 flex items-center gap-4 flex-wrap">
             <span className="bg-white/10 px-4 py-2 rounded-full text-sm">{Object.keys(CYBERSECURITY_TOOLS).length} tools</span>
             <span className="bg-white/10 px-4 py-2 rounded-full text-sm">Autonomous + Manual</span>
@@ -39,7 +39,7 @@ export const CybersecurityTools: React.FC = () => {
             value={scanTarget}
             onChange={(e) => setScanTarget(e.target.value)}
             placeholder="Target domain (e.g., example.com)"
-            className="flex-1 min-w-[250px] px-4 py-3 rounded-lg border border-gray-200 focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all text-sm"
+            className="flex-1 min-w-[250px] px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm"
           />
         </div>
         <p className="text-xs text-gray-500 mt-2">Select a tool below to initiate scan</p>
@@ -79,7 +79,7 @@ export const CybersecurityTools: React.FC = () => {
             key={key}
             onClick={() => handleScan(key)}
             className={`bg-white rounded-xl shadow-md border-2 overflow-hidden cursor-pointer transition-all hover:shadow-xl ${
-              selectedTool === key ? 'border-red-500 shadow-xl' : 'border-gray-100 hover:border-red-200'
+              selectedTool === key ? 'border-blue-500 shadow-xl' : 'border-gray-100 hover:border-blue-200'
             }`}
           >
             <div className={`bg-gradient-to-r ${TOOL_COLORS[key]} p-5 text-white`}>
@@ -118,7 +118,7 @@ export const CybersecurityTools: React.FC = () => {
       </div>
 
       {/* Architecture Note */}
-      <div className="bg-gradient-to-r from-red-50 to-rose-50 rounded-xl border border-red-200 p-6">
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200 p-6">
         <h3 className="font-bold text-gray-800 mb-2 flex items-center gap-2">
           <span>⚔️</span> Implacable Cybersecurity Strategy
         </h3>
@@ -129,9 +129,9 @@ export const CybersecurityTools: React.FC = () => {
           to connect LLMs with 150+ security tools in real-time.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
-          <span className="bg-red-100 text-red-700 text-xs px-3 py-1 rounded-full">✓ Autonomous</span>
-          <span className="bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full">✓ PoC Validation</span>
-          <span className="bg-amber-100 text-amber-700 text-xs px-3 py-1 rounded-full">✓ CI/CD Ready</span>
+          <span className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">✓ Autonomous</span>
+          <span className="bg-indigo-100 text-indigo-700 text-xs px-3 py-1 rounded-full">✓ PoC Validation</span>
+          <span className="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">✓ CI/CD Ready</span>
           <span className="bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full">✓ Team Collaboration</span>
         </div>
       </div>
