@@ -16,7 +16,7 @@ import { AutoTest } from './components/AutoTest';
 import { EcosystemV4 } from './components/EcosystemV4';
 import { RealTest } from './components/RealTest';
 import EnhancedGigafactorySearcherComponent from './components/EnhancedGigafactorySearcher';
-import TestRunner from './components/TestRunner';
+import TestRunner100 from './components/TestRunner100';
 import SystemStatus from './components/SystemStatus';
 
 type Tab = 'status' | 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training';
@@ -64,7 +64,7 @@ function App() {
       case 'evidence': return <EvidenceEngine />;
       case 'autotest': return <AutoTest />;
       case 'realtest': return <RealTest />;
-      case 'testrunner': return <TestRunner />;
+      case 'testrunner': return <TestRunner100 />;
       case 'projects': return <Projects />;
       case 'publications': return <Publications />;
       case 'training': return <Training />;
