@@ -14,8 +14,9 @@ import { CybersecurityTools } from './components/CybersecurityTools';
 import { VectorDatabases } from './components/VectorDatabases';
 import { AutoTest } from './components/AutoTest';
 import { EcosystemV4 } from './components/EcosystemV4';
+import { RealTest } from './components/RealTest';
 
-type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'expertise' | 'evidence' | 'autotest' | 'ecosystem' | 'projects' | 'publications' | 'training';
+type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'ecosystem' | 'projects' | 'publications' | 'training';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'dashboard', label: 'Dashboard', icon: '🏠' },
@@ -30,6 +31,7 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'expertise', label: 'Expertise', icon: '🎯' },
   { id: 'evidence', label: 'Evidence', icon: '🔬' },
   { id: 'autotest', label: 'Auto-Test', icon: '🧪' },
+  { id: 'realtest', label: 'Real Test', icon: '🔥' },
   { id: 'projects', label: 'Projects', icon: '🚀' },
   { id: 'publications', label: 'Publications', icon: '📚' },
   { id: 'training', label: 'Training', icon: '🎓' },
@@ -53,6 +55,7 @@ function App() {
       case 'expertise': return <Expertise />;
       case 'evidence': return <EvidenceEngine />;
       case 'autotest': return <AutoTest />;
+      case 'realtest': return <RealTest />;
       case 'projects': return <Projects />;
       case 'publications': return <Publications />;
       case 'training': return <Training />;
