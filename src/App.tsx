@@ -18,11 +18,13 @@ import { RealTest } from './components/RealTest';
 import EnhancedGigafactorySearcherComponent from './components/EnhancedGigafactorySearcher';
 import TestRunner100 from './components/TestRunner100';
 import SystemStatus from './components/SystemStatus';
+import EngineMonitor from './components/EngineMonitor';
 
-type Tab = 'status' | 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training';
+type Tab = 'status' | 'engine' | 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'status', label: 'Status', icon: '🔍' },
+  { id: 'engine', label: 'Motor', icon: '⚙️' },
   { id: 'dashboard', label: 'Dashboard', icon: '🏠' },
   { id: 'testrunner', label: 'Test 100', icon: '🧪' },
   { id: 'realtest', label: 'Real Test', icon: '🔥' },
@@ -50,6 +52,7 @@ function App() {
   const renderContent = () => {
     switch (activeTab) {
       case 'status': return <SystemStatus />;
+      case 'engine': return <EngineMonitor />;
       case 'dashboard': return <Dashboard />;
       case 'ecosystem': return <EcosystemV4 />;
       case 'ai-act': return <AIActMapper />;
