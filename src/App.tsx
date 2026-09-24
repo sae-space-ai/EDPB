@@ -19,10 +19,15 @@ import EnhancedGigafactorySearcherComponent from './components/EnhancedGigafacto
 import TestRunner100 from './components/TestRunner100';
 import SystemStatus from './components/SystemStatus';
 import EngineMonitor from './components/EngineMonitor';
+import FreeTokens from './components/FreeTokens';
+import MVPDeclaration from './components/MVPDeclaration';
+import { EUAIIcon } from './components/EUAIIcon';
 
-type Tab = 'status' | 'engine' | 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training';
+type Tab = 'mvp' | 'status' | 'engine' | 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training' | 'freetokens';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
+  { id: 'mvp', label: 'MVP', icon: '🇪🇺' },
+  { id: 'freetokens', label: 'Tokens', icon: '🆓' },
   { id: 'status', label: 'Status', icon: '🔍' },
   { id: 'engine', label: 'Motor', icon: '⚙️' },
   { id: 'dashboard', label: 'Dashboard', icon: '🏠' },
@@ -51,6 +56,8 @@ function App() {
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'mvp': return <MVPDeclaration />;
+      case 'freetokens': return <FreeTokens />;
       case 'status': return <SystemStatus />;
       case 'engine': return <EngineMonitor />;
       case 'dashboard': return <Dashboard />;
@@ -82,12 +89,10 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-gradient-to-br from-slate-800 to-blue-700 rounded-lg flex items-center justify-center shadow-md">
-                <span className="text-white font-bold text-xs">EU</span>
-              </div>
+              <EUAIIcon size={40} />
               <div>
-                <h1 className="text-lg font-bold text-gray-800 leading-tight">EDPB-ARCHITECT-2025</h1>
-                <p className="text-xs text-gray-500 hidden sm:block">v2.0 · Arquitecto Algorítmico · Manuel Gago Fernández</p>
+                <h1 className="text-lg font-bold text-gray-800 leading-tight">EDPB-SUPER-ECOSYSTEM</h1>
+                <p className="text-xs text-gray-500 hidden sm:block">v5.0 · MVP · Manuel Gago Fernández · EDPB SPE 2025-2030</p>
               </div>
             </div>
 
