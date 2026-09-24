@@ -8,14 +8,16 @@ import { Providers } from './components/Providers';
 import { Projects } from './components/Projects';
 import { Publications } from './components/Publications';
 import { Training } from './components/Training';
+import { GigafactorySearcher } from './components/GigafactorySearcher';
 
-type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'expertise' | 'evidence' | 'projects' | 'publications' | 'training';
+type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'expertise' | 'evidence' | 'gigafactory' | 'projects' | 'publications' | 'training';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'dashboard', label: 'Dashboard', icon: '🏠' },
   { id: 'ai-act', label: 'AI Act', icon: '🗺️' },
   { id: 'subagents', label: 'Sub-Agents', icon: '🤖' },
   { id: 'providers', label: 'Providers', icon: '🔌' },
+  { id: 'gigafactory', label: 'Gigafactory', icon: '🏭' },
   { id: 'expertise', label: 'Expertise', icon: '🎯' },
   { id: 'evidence', label: 'Evidence', icon: '🔬' },
   { id: 'projects', label: 'Projects', icon: '🚀' },
@@ -33,6 +35,7 @@ function App() {
       case 'ai-act': return <AIActMapper />;
       case 'subagents': return <SubAgents />;
       case 'providers': return <Providers />;
+      case 'gigafactory': return <GigafactorySearcher />;
       case 'expertise': return <Expertise />;
       case 'evidence': return <EvidenceEngine />;
       case 'projects': return <Projects />;
