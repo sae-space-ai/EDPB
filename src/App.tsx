@@ -9,14 +9,20 @@ import { Projects } from './components/Projects';
 import { Publications } from './components/Publications';
 import { Training } from './components/Training';
 import { GigafactorySearcher } from './components/GigafactorySearcher';
+import { GenerativeModels } from './components/GenerativeModels';
+import { CybersecurityTools } from './components/CybersecurityTools';
+import { VectorDatabases } from './components/VectorDatabases';
 
-type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'expertise' | 'evidence' | 'gigafactory' | 'projects' | 'publications' | 'training';
+type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'expertise' | 'evidence' | 'gigafactory' | 'projects' | 'publications' | 'training';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'dashboard', label: 'Dashboard', icon: '🏠' },
   { id: 'ai-act', label: 'AI Act', icon: '🗺️' },
   { id: 'subagents', label: 'Sub-Agents', icon: '🤖' },
   { id: 'providers', label: 'Providers', icon: '🔌' },
+  { id: 'generative', label: 'AI Models', icon: '🧠' },
+  { id: 'cybersecurity', label: 'Security', icon: '🛡️' },
+  { id: 'vectordb', label: 'Vector DB', icon: '🗄️' },
   { id: 'gigafactory', label: 'Gigafactory', icon: '🏭' },
   { id: 'expertise', label: 'Expertise', icon: '🎯' },
   { id: 'evidence', label: 'Evidence', icon: '🔬' },
@@ -35,6 +41,9 @@ function App() {
       case 'ai-act': return <AIActMapper />;
       case 'subagents': return <SubAgents />;
       case 'providers': return <Providers />;
+      case 'generative': return <GenerativeModels />;
+      case 'cybersecurity': return <CybersecurityTools />;
+      case 'vectordb': return <VectorDatabases />;
       case 'gigafactory': return <GigafactorySearcher />;
       case 'expertise': return <Expertise />;
       case 'evidence': return <EvidenceEngine />;
@@ -128,10 +137,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-bold text-gray-800 mb-2">EDPB-ARCHITECT-2025 v2.0</h3>
+              <h3 className="font-bold text-gray-800 mb-2">SUPERALGORITMO-INTEGRAL v3.0</h3>
               <p className="text-sm text-gray-500">
-                Autonomous Algorithmic Architect + Orchestrator of 8 Specialized Sub-Agents.
-                Evidence-based compliance and AI governance for the EDPB Support Pool of Experts 2025-2030.
+                Mega-Agente de Ciberseguridad Implacable + Arquitecto Algorítmico.
+                7 modelos IA generativa, 8 herramientas ciberseguridad, 3 bases vectoriales.
+                EDPB Support Pool of Experts 2025-2030.
               </p>
             </div>
             <div>
@@ -143,16 +153,16 @@ function App() {
             <div>
               <h3 className="font-bold text-gray-800 mb-2">Architecture</h3>
               <p className="text-sm text-gray-500">
-                Hub-and-Spoke Pattern<br />
-                8 Sub-Agents + 7 LLM Providers<br />
-                SAE Evidence Engine · SHA-256 Hashing<br />
-                Human Oversight · Traceability · Auditability
+                Hub-and-Spoke + Microsoft Agent Framework<br />
+                PostgreSQL 17 + pgvector (WAL + PITR)<br />
+                Qwen3 + DeepSeek-V4 + GLM-5.2<br />
+                Strix + Nuclei + PentestGPT + Faraday
               </p>
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-gray-100 text-center">
             <p className="text-xs text-gray-400">
-              © 2025 EDPB-ARCHITECT-2025 v2.0 · Algorithmic Architect · Human Oversight · Traceability · Auditability · Evidence-Based Compliance
+              © 2025 SUPERALGORITMO-INTEGRAL v3.0 · MEGAAGENTE CIBERSEGURIDAD IMPLACABLE · Human Oversight · Traceability · Auditability · Evidence-Based Compliance
             </p>
           </div>
         </div>
