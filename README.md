@@ -110,6 +110,15 @@ Integra los 4 iconos oficiales de la UE (AI Act Art. 50(4)):
 
 **Ver [UNLOCK_55_62_REPORT.md](UNLOCK_55_62_REPORT.md) para detalles completos del desbloqueo.**
 
+## 🔐 Validación de Traza 11dcff8c
+
+**Estado:** ⚠️ Pendiente de archivo de traza
+
+Para completar la validación de la traza con test_id `11dcff8c`:
+- Proporcionar archivo `📜.txt`
+- Ver hash final: `6a858dfc`
+- Ver [TRACE_VALIDATION_AND_UNLOCK_REPORT.md](TRACE_VALIDATION_AND_UNLOCK_REPORT.md)
+
 ## 📄 Documentación
 
 - [RESUMEN_EJECUTIVO.md](RESUMEN_EJECUTIVO.md)
