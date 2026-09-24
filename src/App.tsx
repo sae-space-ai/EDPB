@@ -21,12 +21,17 @@ import SystemStatus from './components/SystemStatus';
 import EngineMonitor from './components/EngineMonitor';
 import FreeTokens from './components/FreeTokens';
 import MVPDeclaration from './components/MVPDeclaration';
+import FreeTokensComplete from './components/FreeTokensComplete';
+import MVPFastTrack from './components/MVPFastTrack';
 import { EUAIIcon } from './components/EUAIIcon';
+import { EUAIActBadge } from './components/EUAIIcons';
 
-type Tab = 'mvp' | 'status' | 'engine' | 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training' | 'freetokens';
+type Tab = 'mvp' | 'mvp-fasttrack' | 'tokens-complete' | 'status' | 'engine' | 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training' | 'freetokens';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
-  { id: 'mvp', label: 'MVP', icon: '🇪🇺' },
+  { id: 'mvp-fasttrack', label: 'MVP Fast-track', icon: '🇪🇺' },
+  { id: 'tokens-complete', label: '14 Tokens', icon: '🆓' },
+  { id: 'mvp', label: 'MVP', icon: '⚡' },
   { id: 'freetokens', label: 'Tokens', icon: '🆓' },
   { id: 'status', label: 'Status', icon: '🔍' },
   { id: 'engine', label: 'Motor', icon: '⚙️' },
@@ -56,6 +61,8 @@ function App() {
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'mvp-fasttrack': return <MVPFastTrack />;
+      case 'tokens-complete': return <FreeTokensComplete />;
       case 'mvp': return <MVPDeclaration />;
       case 'freetokens': return <FreeTokens />;
       case 'status': return <SystemStatus />;
@@ -89,10 +96,10 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <EUAIIcon size={40} />
+              <EUAIActBadge size={48} />
               <div>
                 <h1 className="text-lg font-bold text-gray-800 leading-tight">EDPB-SUPER-ECOSYSTEM</h1>
-                <p className="text-xs text-gray-500 hidden sm:block">v5.0 · MVP · Manuel Gago Fernández · EDPB SPE 2025-2030</p>
+                <p className="text-xs text-gray-500 hidden sm:block">v5.0 · MVP Fast-track · Manuel Gago Fernández · EDPB SPE 2025-2030</p>
               </div>
             </div>
 
