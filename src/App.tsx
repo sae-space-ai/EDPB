@@ -23,12 +23,14 @@ import FreeTokens from './components/FreeTokens';
 import MVPDeclaration from './components/MVPDeclaration';
 import FreeTokensComplete from './components/FreeTokensComplete';
 import MVPFastTrack from './components/MVPFastTrack';
+import DeployWizard from './components/DeployWizard';
 import { EUAIIcon } from './components/EUAIIcon';
 import { EUAIActBadge } from './components/EUAIIcons';
 
-type Tab = 'mvp' | 'mvp-fasttrack' | 'tokens-complete' | 'status' | 'engine' | 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training' | 'freetokens';
+type Tab = 'deploy' | 'mvp' | 'mvp-fasttrack' | 'tokens-complete' | 'status' | 'engine' | 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'testrunner' | 'ecosystem' | 'projects' | 'publications' | 'training' | 'freetokens';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
+  { id: 'deploy', label: 'Deploy', icon: '🚀' },
   { id: 'mvp-fasttrack', label: 'MVP Fast-track', icon: '🇪🇺' },
   { id: 'tokens-complete', label: '14 Tokens', icon: '🆓' },
   { id: 'mvp', label: 'MVP', icon: '⚡' },
@@ -56,11 +58,12 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
 ];
 
 function App() {
-  const [activeTab, setActiveTab] = useState<Tab>('dashboard');
+  const [activeTab, setActiveTab] = useState<Tab>('deploy');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'deploy': return <DeployWizard />;
       case 'mvp-fasttrack': return <MVPFastTrack />;
       case 'tokens-complete': return <FreeTokensComplete />;
       case 'mvp': return <MVPDeclaration />;
