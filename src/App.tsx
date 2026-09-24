@@ -12,8 +12,9 @@ import { GigafactorySearcher } from './components/GigafactorySearcher';
 import { GenerativeModels } from './components/GenerativeModels';
 import { CybersecurityTools } from './components/CybersecurityTools';
 import { VectorDatabases } from './components/VectorDatabases';
+import { AutoTest } from './components/AutoTest';
 
-type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'expertise' | 'evidence' | 'gigafactory' | 'projects' | 'publications' | 'training';
+type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'expertise' | 'evidence' | 'autotest' | 'projects' | 'publications' | 'training';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'dashboard', label: 'Dashboard', icon: '🏠' },
@@ -26,6 +27,7 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'gigafactory', label: 'Gigafactory', icon: '🏭' },
   { id: 'expertise', label: 'Expertise', icon: '🎯' },
   { id: 'evidence', label: 'Evidence', icon: '🔬' },
+  { id: 'autotest', label: 'Auto-Test', icon: '🧪' },
   { id: 'projects', label: 'Projects', icon: '🚀' },
   { id: 'publications', label: 'Publications', icon: '📚' },
   { id: 'training', label: 'Training', icon: '🎓' },
@@ -47,6 +49,7 @@ function App() {
       case 'gigafactory': return <GigafactorySearcher />;
       case 'expertise': return <Expertise />;
       case 'evidence': return <EvidenceEngine />;
+      case 'autotest': return <AutoTest />;
       case 'projects': return <Projects />;
       case 'publications': return <Publications />;
       case 'training': return <Training />;
