@@ -13,11 +13,13 @@ import { GenerativeModels } from './components/GenerativeModels';
 import { CybersecurityTools } from './components/CybersecurityTools';
 import { VectorDatabases } from './components/VectorDatabases';
 import { AutoTest } from './components/AutoTest';
+import { EcosystemV4 } from './components/EcosystemV4';
 
-type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'expertise' | 'evidence' | 'autotest' | 'projects' | 'publications' | 'training';
+type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'expertise' | 'evidence' | 'autotest' | 'ecosystem' | 'projects' | 'publications' | 'training';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'dashboard', label: 'Dashboard', icon: '🏠' },
+  { id: 'ecosystem', label: 'Ecosystem', icon: '🌐' },
   { id: 'ai-act', label: 'AI Act', icon: '🗺️' },
   { id: 'subagents', label: 'Sub-Agents', icon: '🤖' },
   { id: 'providers', label: 'Providers', icon: '🔌' },
@@ -40,6 +42,7 @@ function App() {
   const renderContent = () => {
     switch (activeTab) {
       case 'dashboard': return <Dashboard />;
+      case 'ecosystem': return <EcosystemV4 />;
       case 'ai-act': return <AIActMapper />;
       case 'subagents': return <SubAgents />;
       case 'providers': return <Providers />;
