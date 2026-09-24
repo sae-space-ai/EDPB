@@ -15,8 +15,9 @@ import { VectorDatabases } from './components/VectorDatabases';
 import { AutoTest } from './components/AutoTest';
 import { EcosystemV4 } from './components/EcosystemV4';
 import { RealTest } from './components/RealTest';
+import EnhancedGigafactorySearcherComponent from './components/EnhancedGigafactorySearcher';
 
-type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'ecosystem' | 'projects' | 'publications' | 'training';
+type Tab = 'dashboard' | 'ai-act' | 'subagents' | 'providers' | 'generative' | 'cybersecurity' | 'vectordb' | 'gigafactory' | 'enhanced-search' | 'expertise' | 'evidence' | 'autotest' | 'realtest' | 'ecosystem' | 'projects' | 'publications' | 'training';
 
 const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'dashboard', label: 'Dashboard', icon: '🏠' },
@@ -28,6 +29,7 @@ const tabs: { id: Tab; label: string; icon: string }[] = [
   { id: 'cybersecurity', label: 'Security', icon: '🛡️' },
   { id: 'vectordb', label: 'Vector DB', icon: '🗄️' },
   { id: 'gigafactory', label: 'Gigafactory', icon: '🏭' },
+  { id: 'enhanced-search', label: 'Enhanced Search', icon: '🔍' },
   { id: 'expertise', label: 'Expertise', icon: '🎯' },
   { id: 'evidence', label: 'Evidence', icon: '🔬' },
   { id: 'autotest', label: 'Auto-Test', icon: '🧪' },
@@ -52,6 +54,7 @@ function App() {
       case 'cybersecurity': return <CybersecurityTools />;
       case 'vectordb': return <VectorDatabases />;
       case 'gigafactory': return <GigafactorySearcher />;
+      case 'enhanced-search': return <EnhancedGigafactorySearcherComponent />;
       case 'expertise': return <Expertise />;
       case 'evidence': return <EvidenceEngine />;
       case 'autotest': return <AutoTest />;
